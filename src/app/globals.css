@@ -1,0 +1,439 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════
+   Design Tokens — gangnam-ak.com (80%+) Luxury Theme
+   ═══════════════════════════════════════════ */
+:root {
+  --bg-main: #0c0d12;
+  --bg-darker: #07070a;
+  --bg-card: #12131a;
+  --bg-card-alt: #171822;
+
+  --gold-primary: #d4956a;
+  --gold-light: #f3cf9e;
+  --gold-bright: #e5a974;
+  --gold-dark: #9e633a;
+  --gold-border: rgba(212, 149, 106, 0.35);
+
+  --text-main: #f0ede6;
+  --text-muted: #9e9ba5;
+  --text-dim: #6d6b75;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+
+  --font-sans: var(--font-noto-sans-kr), "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@theme inline {
+  --color-bg-main: var(--bg-main);
+  --color-bg-darker: var(--bg-darker);
+  --color-bg-card: var(--bg-card);
+  --color-bg-card-alt: var(--bg-card-alt);
+  --color-gold-primary: var(--gold-primary);
+  --color-gold-light: var(--gold-light);
+  --color-gold-bright: var(--gold-bright);
+  --color-gold-dark: var(--gold-dark);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-text-dim: var(--text-dim);
+  --font-sans: var(--font-sans);
+}
+
+/* ═══════════════════════════════════════════
+   Base Styles
+   ═══════════════════════════════════════════ */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-main);
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(212, 149, 106, 0.35);
+  color: #ffffff;
+}
+
+/* ═══════════════════════════════════════════
+   Gold Gradients & Typography
+   ═══════════════════════════════════════════ */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f7d5a4 0%, #d4956a 50%, #c07a4a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gold-bright {
+  color: #e5a974;
+}
+
+.gold-separator {
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, #d4956a, transparent);
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.gold-separator-center {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #d4956a, transparent);
+  margin: 14px auto 24px auto;
+}
+
+/* ═══════════════════════════════════════════
+   gangnam-ak Style Gold Button
+   ═══════════════════════════════════════════ */
+.gold-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #e5a974 0%, #d4956a 50%, #b87342 100%);
+  color: #0c0d12;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 14px 28px;
+  box-shadow: 0 6px 20px rgba(212, 149, 106, 0.35);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.gold-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(212, 149, 106, 0.5);
+  filter: brightness(1.08);
+}
+
+.gold-button-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(212, 149, 106, 0.08);
+  border: 1px solid rgba(212, 149, 106, 0.45);
+  color: #f7d5a4;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 14px 28px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.gold-button-outline:hover {
+  background: rgba(212, 149, 106, 0.2);
+  border-color: #e5a974;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.gold-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(212, 149, 106, 0.12);
+  border: 1px solid rgba(212, 149, 106, 0.35);
+  border-radius: 9999px;
+  color: #f3cf9e;
+  font-size: 0.825rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* ═══════════════════════════════════════════
+   gangnam-ak Zigzag Number Badge (01, 02, 03, 04)
+   ═══════════════════════════════════════════ */
+.circle-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(212, 149, 106, 0.2), rgba(184, 115, 66, 0.08));
+  border: 2px solid #d4956a;
+  color: #f7d5a4;
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: serif, sans-serif;
+  box-shadow: 0 0 20px rgba(212, 149, 106, 0.25);
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════
+   gangnam-ak Price Calculator Card
+   ═══════════════════════════════════════════ */
+.price-calc-container {
+  background: linear-gradient(145deg, #15161f 0%, #0d0e14 100%);
+  border: 1px solid rgba(212, 149, 106, 0.3);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 640px) {
+  .price-calc-container {
+    padding: 20px 16px;
+  }
+}
+
+.calc-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+  cursor: pointer;
+}
+
+.calc-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e5a974, #b87342);
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(212, 149, 106, 0.6);
+  border: 2px solid #ffffff;
+  transition: transform 0.2s ease;
+}
+
+.calc-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+.calc-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e5a974, #b87342);
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(212, 149, 106, 0.6);
+  border: 2px solid #ffffff;
+}
+
+.counter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(212, 149, 106, 0.25);
+  color: #f7d5a4;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.counter-btn:hover {
+  background: rgba(212, 149, 106, 0.25);
+  border-color: #d4956a;
+  color: #ffffff;
+}
+
+.counter-btn:active {
+  transform: scale(0.92);
+}
+
+/* ═══════════════════════════════════════════
+   gangnam-ak Comparison Table
+   ═══════════════════════════════════════════ */
+.ak-comparison-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid rgba(212, 149, 106, 0.25);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #11121a;
+}
+
+.ak-comparison-table th,
+.ak-comparison-table td {
+  padding: 18px 16px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.ak-comparison-table th {
+  background: #181a24;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #f0ede6;
+}
+
+.ak-comparison-table th.highlight-col {
+  background: linear-gradient(180deg, rgba(212, 149, 106, 0.25) 0%, rgba(212, 149, 106, 0.1) 100%);
+  color: #f7d5a4;
+  font-weight: 900;
+  font-size: 1.05rem;
+  border-bottom: 2px solid #d4956a;
+}
+
+.ak-comparison-table td.row-label {
+  background: rgba(255, 255, 255, 0.02);
+  color: #e5a974;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 20px;
+  width: 20%;
+}
+
+.ak-comparison-table td.highlight-col {
+  background: rgba(212, 149, 106, 0.06);
+  color: #f7d5a4;
+  font-weight: 700;
+}
+
+.ak-comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 640px) {
+  .ak-comparison-table th,
+  .ak-comparison-table td {
+    padding: 12px 6px;
+    font-size: 0.72rem;
+  }
+  .ak-comparison-table td.row-label {
+    padding-left: 10px;
+    width: 24%;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   gangnam-ak Card Styles
+   ═══════════════════════════════════════════ */
+.ak-card {
+  background: linear-gradient(145deg, #161722 0%, #101118 100%);
+  border: 1px solid rgba(212, 149, 106, 0.18);
+  border-radius: 16px;
+  padding: 28px;
+  transition: all 0.3s ease;
+}
+
+.ak-card:hover {
+  border-color: rgba(212, 149, 106, 0.45);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transform: translateY(-3px);
+}
+
+.ak-card-gold {
+  background: linear-gradient(145deg, #1c1a24 0%, #13121a 100%);
+  border: 1px solid rgba(212, 149, 106, 0.4);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 8px 24px rgba(212, 149, 106, 0.1);
+}
+
+/* ═══════════════════════════════════════════
+   gangnam-ak FAQ Item
+   ═══════════════════════════════════════════ */
+.ak-faq-item {
+  border: 1px solid rgba(212, 149, 106, 0.2);
+  border-radius: 12px;
+  background: #13141d;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.ak-faq-item:hover {
+  border-color: rgba(212, 149, 106, 0.4);
+}
+
+.ak-faq-item summary {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.ak-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.ak-faq-item[open] summary {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(212, 149, 106, 0.04);
+}
+
+.ak-faq-item .faq-answer {
+  padding: 20px 24px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* ═══════════════════════════════════════════
+   Mobile Fixed Bottom Navigation Bar (gangnam-ak style)
+   ═══════════════════════════════════════════ */
+.mobile-fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #090a0f;
+  border-top: 1px solid rgba(212, 149, 106, 0.35);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.mobile-fixed-bottom a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 12px;
+  font-weight: 700;
+  font-size: 0.925rem;
+  text-decoration: none;
+  transition: filter 0.2s ease;
+}
+
+.mobile-fixed-bottom .btn-call {
+  background: linear-gradient(135deg, #e5a974, #b87342);
+  color: #0c0d12;
+}
+
+.mobile-fixed-bottom .btn-sms {
+  background: #161722;
+  color: #f7d5a4;
+  border-left: 1px solid rgba(212, 149, 106, 0.2);
+}
+
+@media (min-width: 768px) {
+  .mobile-fixed-bottom {
+    display: none;
+  }
+}
