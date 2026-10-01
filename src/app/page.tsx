@@ -77,14 +77,14 @@ export default function Home() {
 
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-white leading-tight sm:leading-tight">
-              강남 가라오케의 새로운 기준<br />
+              강남 유흥 이용 안내<br />
               <span className="text-gold-gradient">하이가라오케 엘리트</span>
             </h1>
 
             {/* Description */}
             <p className="mt-6 text-sm sm:text-base md:text-lg text-text-muted max-w-3xl mx-auto leading-relaxed">
-              ‘하이가라오케’는 강남 하이퍼블릭의 새로운 차원의 경험을 제공합니다.<br className="hidden sm:inline" />
-              최고의 순간을 위한 단 하나의 선택, ‘하이가라오케’에서 그 차이를 직접 경험해 보세요.
+              강남 유흥을 알아보는 분께 강남 하이퍼블릭 시스템과 이용 방법을 안내합니다.<br className="hidden sm:inline" />
+              강남 가라오케 가격과 시간당 비용, 할인 조건을 확인하고 하이가라오케 방문을 준비하세요.
             </p>
 
             {/* Action Buttons */}
@@ -120,7 +120,7 @@ export default function Home() {
                 강남 쩜오, 그 이상의 시스템
               </span>
               <h2 className="text-2xl sm:text-4xl font-black text-white mt-2">
-                강남 가라오케 | 하이가라오케
+                강남 하이퍼블릭 시스템 안내
               </h2>
               <div className="gold-separator-center" />
               <p className="text-sm sm:text-base text-text-muted leading-relaxed">
@@ -215,6 +215,7 @@ export default function Home() {
                       src="/room1.jpg"
                       alt="독보적인 스케일 하이가라오케 룸"
                       fill
+                      sizes="(min-width: 1152px) 544px, (min-width: 1024px) 48vw, 100vw"
                       className="object-cover"
                     />
                   </div>
@@ -227,7 +228,7 @@ export default function Home() {
                   <div className="circle-number">02</div>
                   <div>
                     <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
-                      '엘리트 전담' 팀장의 명품 케어
+                      &apos;엘리트 전담&apos; 팀장의 명품 케어
                     </h3>
                     <p className="mt-3 text-sm sm:text-base text-text-muted leading-relaxed">
                       강남 유흥의 트렌드를 선도하는 엘리트 전담 팀장이 이름에 걸맞은 신속하고 확실한 서비스로 오직 고객님만을 위한 최고의 자리를 책임지고 만들어 드립니다.
@@ -240,6 +241,7 @@ export default function Home() {
                       src="/room2.jpg"
                       alt="엘리트 전담 팀장의 명품 케어"
                       fill
+                      sizes="(min-width: 1152px) 544px, (min-width: 1024px) 48vw, 100vw"
                       className="object-cover"
                     />
                   </div>
@@ -265,6 +267,7 @@ export default function Home() {
                       src="/room3.jpg"
                       alt="3인 1조 전담 케어 시스템"
                       fill
+                      sizes="(min-width: 1152px) 544px, (min-width: 1024px) 48vw, 100vw"
                       className="object-cover"
                     />
                   </div>
@@ -290,6 +293,7 @@ export default function Home() {
                       src="/hero.jpg"
                       alt="퍼스트 클래스 픽업 서비스"
                       fill
+                      sizes="(min-width: 1152px) 544px, (min-width: 1024px) 48vw, 100vw"
                       className="object-cover"
                     />
                   </div>
@@ -309,13 +313,13 @@ export default function Home() {
                 투명한 시스템 및 정찰제 요금 안내
               </span>
               <h2 className="text-2xl sm:text-4xl font-black text-white mt-2">
-                시스템 및 요금
+                강남 가라오케 가격 안내
               </h2>
               <div className="gold-separator-center" />
               <p className="text-sm sm:text-base text-text-muted leading-relaxed">
                 강남 엘리트 하이가라오케는 모든 가격을 투명하게 공개하는 정찰제를 원칙으로 합니다.<br />
                 불필요한 견적 부풀리기 없이, 방문부터 배웅까지 기분 좋은 경험만을 약속드립니다.<br />
-                강남 쩜오 가격, 강남 도파민 주대와 꼼꼼히 비교해 보십시오.
+                강남 가라오케 가격은 기본 주대와 시간당 비용, 할인 적용 여부를 함께 확인해 주세요.
               </p>
               <p className="mt-3 text-sm font-bold text-gold-light">
                 하이가라오케는 거품 없는 합리적인 가격으로 최고의 만족을 제공합니다.
@@ -412,16 +416,16 @@ export default function Home() {
             {/* Gallery Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
               <div className="relative h-48 sm:h-64 rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <Image src="/room1.jpg" alt="하이가라오케 VIP룸 전경 1" fill className="object-cover hover:scale-105 transition-transform duration-500" />
+                <Image src="/room1.jpg" alt="하이가라오케 VIP룸 전경 1" fill sizes="(min-width: 1152px) 544px, (min-width: 640px) 48vw, 100vw" className="object-cover hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="relative h-48 sm:h-64 rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <Image src="/room2.jpg" alt="하이가라오케 파티 스위트 2" fill className="object-cover hover:scale-105 transition-transform duration-500" />
+                <Image src="/room2.jpg" alt="하이가라오케 파티 스위트 2" fill sizes="(min-width: 1152px) 544px, (min-width: 640px) 48vw, 100vw" className="object-cover hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="relative h-48 sm:h-64 rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <Image src="/room3.jpg" alt="하이가라오케 프리미엄 세팅 3" fill className="object-cover hover:scale-105 transition-transform duration-500" />
+                <Image src="/room3.jpg" alt="하이가라오케 프리미엄 세팅 3" fill sizes="(min-width: 1152px) 544px, (min-width: 640px) 48vw, 100vw" className="object-cover hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="relative h-48 sm:h-64 rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <Image src="/hero.jpg" alt="하이가라오케 라운지 4" fill className="object-cover hover:scale-105 transition-transform duration-500" />
+                <Image src="/hero.jpg" alt="하이가라오케 라운지 4" fill sizes="(min-width: 1152px) 544px, (min-width: 640px) 48vw, 100vw" className="object-cover hover:scale-105 transition-transform duration-500" />
               </div>
             </div>
 
@@ -625,8 +629,8 @@ export default function Home() {
                 answer="하이가라오케는 기존 강남 가라오케의 대중성과 강남 쩜오 시스템의 높은 퀄리티를 결합하여 한 차원 더 진화시킨 하이엔드 시스템입니다. 더 럭셔리한 시설, 차별화된 서비스로 기존에 만족하지 못하셨던 부분까지 완벽하게 채워드립니다."
               />
               <GangnamAkFaq
-                question="가격(주대)이 투명한가요? 추가 요금이 걱정됩니다."
-                answer="네, 하이가라오케는 100% 정찰제를 원칙으로 합니다. 안내해 드린 기본 주대, T/C 외에 고객님의 동의 없는 불필요한 추가 요금을 절대 요구하지 않습니다. 강남 룸싸롱 가격과 비교하셔도 가장 투명하고 합리적인 견적을 약속드립니다."
+                question="강남 가라오케 가격은 어떤 항목을 확인해야 하나요?"
+                answer="기본 주대, 첫 타임과 연장 비용, 이용 인원과 할인 적용 시간을 함께 확인하세요. 요금 계산기 합계에 RT(룸비)는 포함되지 않습니다. WT·RT와 추가 주문 비용은 예약 전에 문의해 주세요. 최종 포함 항목과 총액을 확인한 뒤 이용하시면 됩니다."
               />
               <GangnamAkFaq
                 question="예약은 필수인가요? 당일 방문도 가능한가요?"
@@ -661,7 +665,7 @@ export default function Home() {
               <div className="mt-4 space-y-1 text-text-muted text-xs">
                 <p>상호: 하이가라오케 | 대표번호: <a href="tel:010-8701-1746" className="text-gold-bright hover:underline">010-8701-1746</a></p>
                 <p>주소: 서울특별시 강남구 대치동 890-38 엘리트</p>
-                <p>주요 키워드: 강남 엘리트, 강남 룸싸롱, 강남 룸싸롱 가격, 하이가라오케</p>
+                <p>강남 유흥 이용 전, 강남 가라오케 가격과 강남 하이퍼블릭 시스템을 확인하세요.</p>
               </div>
             </div>
 

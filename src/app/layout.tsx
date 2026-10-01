@@ -9,33 +9,31 @@ const notoSansKr = Noto_Sans_KR({
   display: "swap",
 });
 
+const seoTitle = "강남 유흥 | 강남 가라오케 가격·하이퍼블릭 안내";
+const seoDescription = "강남 유흥을 알아보는 분을 위한 하이가라오케 이용 안내. 강남 가라오케 가격, 강남 하이퍼블릭 시스템, 시간당 비용과 할인 조건을 확인하세요. 대치동 위치·예약 문의 010-8701-1746.";
+
 export const metadata: Metadata = {
-  title: "☎ 010-8701-1746 | 강남 엘리트 하이가라오케 | 강남 룸싸롱 | 프라이빗 VIP룸",
-  description:
-    "☎ 010-8701-1746 | 강남 엘리트 하이가라오케. 대치동 890-38 위치, 프라이빗 VIP 룸, 투명 정찰제 운영. 강남 룸싸롱 가격 안내 및 실시간 요금 계산기 제공.",
-  keywords: ["강남 엘리트", "강남 룸싸롱", "강남 룸싸롱 가격", "하이가라오케", "강남 가라오케", "대치동 엘리트"],
+  metadataBase: new URL("https://winterbeom-room.com"),
+  title: seoTitle,
+  description: seoDescription,
+  keywords: ["강남 유흥", "강남 가라오케 가격", "강남 하이퍼블릭"],
   openGraph: {
-    title: "☎ 010-8701-1746 | 강남 엘리트 하이가라오케 | 강남 룸싸롱",
-    description:
-      "강남 엘리트 하이가라오케. 대치동 890-38 위치, 프라이빗 VIP 룸, 투명 정찰제 운영. 전화 010-8701-1746.",
-    url: "https://winterbeom-room.com",
+    title: seoTitle,
+    description: seoDescription,
+    url: "https://winterbeom-room.com/",
     siteName: "하이가라오케",
     locale: "ko_KR",
     type: "website",
+    images: [{ url: "/hero.jpg", alt: "하이가라오케 라운지" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "☎ 010-8701-1746 | 강남 엘리트 하이가라오케",
-    description:
-      "강남 엘리트 하이가라오케. 대치동 890-38 위치, 프라이빗 VIP 룸, 투명 정찰제 운영.",
+    title: seoTitle,
+    description: seoDescription,
+    images: ["/hero.jpg"],
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: "https://winterbeom-room.com",
-  },
+  robots: { index: true, follow: true },
+  alternates: { canonical: "https://winterbeom-room.com/" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -62,6 +60,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                   alternateName: ["강남 엘리트", "하이 가라오케", "Hi Karaoke"],
                   url: "https://winterbeom-room.com",
                   telephone: "+82-10-8701-1746",
+                  image: "https://winterbeom-room.com/hero.jpg",
                   address: {
                     "@type": "PostalAddress",
                     streetAddress: "대치동 890-38 엘리트",

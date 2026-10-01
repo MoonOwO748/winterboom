@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useState } from "react";
 
 /* ═══════════════════════════════════════════
    gangnam-ak Style Price Calculator
@@ -213,7 +213,7 @@ export function GangnamAkCalculator() {
         </div>
 
         <p className="text-[11px] text-text-dim mt-3 text-center">
-          ※ 기본 위스키 기준 예상 비용입니다. WT, RT는 별도 문의 부탁드립니다.
+          ※ 기본 위스키 기준 예상 비용이며 RT(룸비)는 합계에 포함되지 않습니다. WT·RT는 별도 문의해 주세요.
         </p>
 
         <div className="mt-5 flex flex-col sm:flex-row gap-3">
